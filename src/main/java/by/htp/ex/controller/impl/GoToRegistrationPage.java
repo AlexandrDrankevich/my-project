@@ -3,6 +3,7 @@ package by.htp.ex.controller.impl;
 import java.io.IOException;
 
 import by.htp.ex.controller.Command;
+import by.htp.ex.controller.JspPageName;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -11,7 +12,7 @@ public class GoToRegistrationPage implements Command{
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/jsp/registration.jsp").forward(request, response);
+		request.getRequestDispatcher(JspPageName.REGISTRATION_PAGE).forward(request, response);
 		
 	}
 

@@ -2,6 +2,7 @@ package by.htp.ex.controller.impl;
 
 import by.htp.ex.bean.User;
 import by.htp.ex.controller.Command;
+import by.htp.ex.controller.JspPageName;
 import by.htp.ex.service.ServiceException;
 import by.htp.ex.service.ServiceProvider;
 import by.htp.ex.service.UserService;
@@ -26,7 +27,7 @@ public class DoRegistration implements Command {
        try {
            boolean result = service.registration(user);
            if (result) {
-               request.getRequestDispatcher("/WEB-INF/jsp/authorization.jsp").forward(request, response);
+               request.getRequestDispatcher(JspPageName.AUTHORIZATION_PAGE).forward(request, response);
            } else response.getWriter().println("CAN NOT REGISTRATE");
        }catch (ServiceException e){
            //stub
