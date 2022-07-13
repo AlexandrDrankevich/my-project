@@ -14,7 +14,7 @@ public class Controller extends HttpServlet {
 
 	}
 
-	CommandProvider provider = new CommandProvider();
+	private final CommandProvider provider = new CommandProvider();
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
